@@ -5,8 +5,12 @@
             "run_at": "2025-01-02T21:58:00"
         },
         {
-            "name": "ddos_module",
-            "run_at": "2025-01-02T22:17:00"
+            "name": "google_ping",
+            "run_at": "2025-01-02T22:30:00",
+            "parameters": {
+                "url": "youtube.com",
+                "ping_interval": 10
+            }
         }
     ]
 }
