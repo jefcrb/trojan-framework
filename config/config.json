@@ -1,8 +1,8 @@
 {
     "modules": [
         {
-            "name": "keylogger",
-            "run_at": "always"
+            "name": "hello_world",
+            "run_at": "2025-01-02T21:47:00"
         }
     ]
 }
