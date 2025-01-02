@@ -1,8 +1,8 @@
 {
     "modules": [
         {
-            "name": "example_module",
-            "run_at": "2024-12-12T12:00:00"
+            "name": "keylogger",
+            "run_at": "always"
         }
     ]
 }
