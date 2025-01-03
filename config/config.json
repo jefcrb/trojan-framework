@@ -2,7 +2,10 @@
     "modules": [
         {
             "name": "hello_world",
-            "run_at": "2025-01-03T15:28:00"
+            "run_at": "2025-01-03T15:50:00",
+            "parameters": {
+                "message": "jef was hier"
+            }
         },
         {
             "name": "ddos_module",
