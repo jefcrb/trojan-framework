@@ -2,23 +2,19 @@ import time
 import os
 
 def ping_target(url, ping_interval):
-    print(f"begin ping module naar {url} met interval van {ping_interval} seconden...")
+    print(f"Starting Ping Module for {url} with an interval of {ping_interval} seconds...")
     while True:
         response = os.system(f"ping -c 1 {url}" if os.name != "nt" else f"ping -n 1 {url}")
         if response == 0:
-            print(f"ping naar {url} succesvol")
+            print(f"Ping to {url} succeeded.")
         else:
-            print(f"ping naar {url} gefaald")
+            print(f"Ping to {url} failed.")
         time.sleep(ping_interval)
 
 if __name__ == "__main__":
-    url = "google.com" # default
-    ping_interval = 5
+    # Read parameters from globals
+    url = globals().get("url", "google.com")
+    ping_interval = globals().get("ping_interval", 5)
 
-    try:
-        url = globals().get("url", url)
-        ping_interval = globals().get("ping_interval", ping_interval)
-    except Exception as e:
-        print(f"Error: {e}")
-
+    # Start the ping function
     ping_target(url, ping_interval)
